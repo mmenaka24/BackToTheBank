@@ -3,8 +3,11 @@ def main():
     print(f"${value(greeting)}")
 
 
-def standardiseStr(str):
-    return str.lower().strip()
+def standardiseStr(string):
+    if not isinstance(string, str):
+        raise TypeError
+
+    return string.lower().strip()
 
 
 def value(greeting):

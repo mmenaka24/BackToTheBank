@@ -1,3 +1,4 @@
+import pytest
 from bank import value
 
 
@@ -19,3 +20,14 @@ def test_value_caps():
 
 def test_value_mixed_case():
     assert value("Hey There") == 20
+
+
+def test_value_type_error():
+    with pytest.raises(TypeError):
+        value()
+
+    with pytest.raises(TypeError):
+        value(1)
+
+    with pytest.raises(TypeError):
+        value(0.5)
