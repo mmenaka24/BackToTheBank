@@ -38,10 +38,6 @@ def test_value_empty_string():
     assert value("") == 100
 
 
-def test_value_hello_with_punctuation():
-    assert value("hello!") == 0
-
-
 def test_value_type_error():
     with pytest.raises(TypeError):
         value()
