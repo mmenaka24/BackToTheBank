@@ -3,17 +3,17 @@ def main():
     print(f"${value(greeting)}")
 
 
-def standardiseStr(string):
+def standardise_str(string):
     if not isinstance(string, str):
-        raise TypeError
+        raise TypeError("Input must be a string")
 
     return string.lower().strip()
 
 
 def value(greeting):
-    greeting = standardiseStr(greeting)
+    greeting = standardise_str(greeting)
 
-    if greeting == "hello":
+    if greeting.startswith("hello"):
         return 0
     elif greeting.startswith("h"):
         return 20
